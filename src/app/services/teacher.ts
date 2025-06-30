@@ -8,7 +8,7 @@ import { Teacher } from '../modules/teacher.module';
 
 })
 export class TeacherService {
-  private apiUrl = 'http://localhost:3000/teacher';
+  private apiUrl = 'https://student-teacher-management-server-rcv8.onrender.com/teacher';
 
   constructor(private http: HttpClient) {}
 

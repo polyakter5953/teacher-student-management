@@ -26,7 +26,7 @@ export class AddStudent {
 
   submitStudent(): void {
     this.http
-      .post('http://localhost:3000/student', {
+      .post('https://student-teacher-management-server-rcv8.onrender.com/student', {
         name: this.student.name,
         email: this.student.email,
         subject: this.student.tid,

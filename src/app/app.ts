@@ -4,7 +4,6 @@ import { Homepage } from './homepage/homepage';
 import { Header } from './header/header';
 import { Signup } from './signup/signup';
 import { FormsModule } from '@angular/forms';
-import { UserHome } from './user-home/user-home';
 import {  OnInit } from '@angular/core';
 import { Navbar } from './navbar/navbar';
 import { TeacherSection } from './teacher-section/teacher-section';
@@ -29,7 +28,6 @@ import { Router } from '@angular/router';
     Homepage, 
     Header, 
     Signup,
-    UserHome,
     Navbar,
     TeacherSection,
     StudentInformation,

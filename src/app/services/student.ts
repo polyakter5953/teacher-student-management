@@ -8,7 +8,7 @@ import { Student } from '../modules/student.module';
 })
 export class StudentService {
 
-  private apiUrl = 'http://localhost:3000/student';
+  private apiUrl = 'https://student-teacher-management-server-rcv8.onrender.com/student';
   constructor(private http: HttpClient) { }
 
     getStudent(): Observable<Student[]> {

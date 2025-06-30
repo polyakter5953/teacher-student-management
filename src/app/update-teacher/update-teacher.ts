@@ -24,17 +24,20 @@ export class UpdateTeacher {
   }
 
   loadTeacher() {
-    this.http.get(`http://localhost:3000/teacher/${this.teacherId}`)
+    this.http.get(`https://student-teacher-management-server-rcv8.onrender.com/teacher/${this.teacherId}`)
       .subscribe(data => {
         this.teacher = data;
       });
   }
 
   updateTeacher() {
-    this.http.put(`http://localhost:3000/teacher/${this.teacherId}`, this.teacher)
+    this.http.put(`https://student-teacher-management-server-rcv8.onrender.com/teacher/${this.teacherId}`, this.teacher)
+    // this.http.put(`http://localhost:3000/teacher/${this.teacherId}`, this.teacher)
       .subscribe(() => {
         alert('Teacher updated successfully!');
         this.router.navigate(['/teacher-information']);
       });
   }
 }
+
+// https://student-teacher-management-server-rcv8.onrender.com/teacher

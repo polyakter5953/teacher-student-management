@@ -22,7 +22,7 @@ export class StudentDetails {
   }
 
   loadTeacher() {
-    this.http.get(`http://localhost:3000/student/${this.studentId}`)
+    this.http.get(`https://student-teacher-management-server-rcv8.onrender.com/student/${this.studentId}`)
       .subscribe(data => {
         this.student = data;
         console.log(this.student)

@@ -25,7 +25,7 @@ export class AddTeacher {
 
   submitTeacher(): void {
     this.http
-      .post('http://localhost:3000/teacher', {
+      .post('https://student-teacher-management-server-rcv8.onrender.com/teacher', {
         name: this.teacher.name,
         email: this.teacher.email,
         subject: this.teacher.subject,

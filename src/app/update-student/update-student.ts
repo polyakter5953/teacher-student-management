@@ -22,14 +22,14 @@ export class UpdateStudent {
   }
 
   loadStudent() {
-    this.http.get(`http://localhost:3000/student/${this.studentId}`)
+    this.http.get(`https://student-teacher-management-server-rcv8.onrender.com/student/${this.studentId}`)
       .subscribe(data => {
         this.student = data;
       });
   }
 
   updateStudent() {
-    this.http.put(`http://localhost:3000/student/${this.studentId}`, this.student)
+    this.http.put(`https://student-teacher-management-server-rcv8.onrender.com/student/${this.studentId}`, this.student)
       .subscribe(() => {
         alert('Student updated successfully!');
         this.router.navigate(['/student-information']);

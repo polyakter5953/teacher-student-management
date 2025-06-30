@@ -43,7 +43,7 @@ export class Users {
     // api call code will be here
     this.http
       .get(
-        `http://localhost:3000/user?email=${data.email}&password=${data.password}`,
+        `https://student-teacher-management-server-rcv8.onrender.com/user?email=${data.email}&password=${data.password}`,
         { observe: 'response' }
       )
       .subscribe((result: any) => {

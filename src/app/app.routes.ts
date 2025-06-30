@@ -7,7 +7,7 @@ import { TeacherInformation } from './teacher-information/teacher-information';
 import { UpdateStudent } from './update-student/update-student';
 import { UpdateTeacher } from './update-teacher/update-teacher';
 import { Signup } from './signup/signup';
-import { UserHome } from './user-home/user-home';
+
 import { authGuard } from './auth-guard';
 import { Navbar } from './navbar/navbar';
 import { AddTeacher } from './add-teacher/add-teacher';
@@ -58,18 +58,6 @@ export const routes: Routes = [
     {
         path:'signup',
         component: Signup
-    },
-    {
-        path:'user-home',
-        component: UserHome,
-        canActivate: [authGuard]
-
-    },
-    {
-        path:'logout',
-        component: UserHome,
-        canActivate: [authGuard]
-
     },
     {
         path:'navbar',
