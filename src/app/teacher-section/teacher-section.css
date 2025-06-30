@@ -1,0 +1,22 @@
+.teacher-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+.teacher-section button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-section button:hover {
+  background-color: #0056b3;
+}

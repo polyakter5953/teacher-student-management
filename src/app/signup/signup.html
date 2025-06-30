@@ -1,0 +1,117 @@
+<div class="user-auth">
+  <!-- Sign-Up Form -->
+  <div *ngIf="!showLogin" class="sign-up">
+    <h1>User Sign-Up</h1>
+
+    <form
+      #userSignUp="ngForm"
+      (ngSubmit)="signup(userSignUp.value, userSignUp)"
+      class="common-form"
+      novalidate
+    >
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="name"
+        required
+        placeholder="Enter name"
+      />
+      <div
+        *ngIf="userSignUp.controls?.['name']?.touched && userSignUp.controls?.['name']?.invalid"
+        class="error"
+      >
+        Name is required
+      </div>
+
+      <input
+        class="form-input"
+        type="password"
+        ngModel
+        name="password"
+        required
+        minlength="6"
+        placeholder="Enter password"
+      />
+      <div
+        *ngIf="userSignUp.controls?.['password']?.touched && userSignUp.controls?.['password']?.invalid"
+        class="error"
+      >
+        Password is required and must be at least 6 characters
+      </div>
+      <input
+        class="form-input"
+        type="email"
+        ngModel
+        name="email"
+        required
+        email
+        placeholder="Enter Email"
+      />
+      <div
+        *ngIf="userSignUp.controls?.['email']?.touched && userSignUp.controls?.['email']?.invalid"
+        class="error"
+      >
+        Valid email is required
+      </div>
+
+      <button class="form-button" [disabled]="userSignUp.invalid">
+        Signup
+      </button>
+      <a class="auth-toggle" (click)="openLogin()">
+        Already Have Account? Click to Login
+      </a>
+    </form>
+  </div>
+
+  <!-- Login Form -->
+  <div *ngIf="showLogin" class="sign-up">
+    <h1>User Log-In</h1>
+
+    <div *ngIf="loginError" class="error">Email or password is incorrect</div>
+
+    <form
+      #userLogin="ngForm"
+      (ngSubmit)="login(userLogin.value, userLogin)"
+      class="common-form"
+      novalidate
+    >
+      <input
+        class="form-input"
+        type="email"
+        ngModel
+        name="email"
+        required
+        email
+        placeholder="Enter Email"
+      />
+      <div
+        *ngIf="userLogin.controls?.['email']?.touched && userLogin.controls?.['email']?.invalid"
+      class="error"
+      >
+        Valid email is required
+      </div>
+
+      <input
+        class="form-input"
+        type="password"
+        ngModel
+        name="password"
+        required
+        minlength="6"
+        placeholder="Enter Password"
+      />
+      <div
+        *ngIf="userLogin.controls?.['password']?.touched && userLogin.controls?.['password']?.invalid"
+      class="error"
+      >
+        Password is required and must be at least 6 characters
+      </div>
+
+      <button class="form-button" [disabled]="userLogin.invalid">Login</button>
+      <a class="auth-toggle" (click)="openSignUp()">
+        Don't Have Account? Click to Signup
+      </a>
+    </form>
+  </div>
+</div>

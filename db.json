@@ -1,0 +1,50 @@
+{
+  "user": [
+    {
+      "id": "5f58",
+      "name": "aam",
+      "password": "aaaaaa",
+      "email": "aam@gmail.com"
+    }
+  ],
+  "teacher": [
+    {
+      "id": "1",
+      "name": "a",
+      "email": "a@example.com",
+      "subject": "CSTE"
+    },
+    {
+      "id": "2",
+      "name": "b",
+      "email": "b@example.com",
+      "subject": "Physics"
+    },
+    {
+      "id": "3688",
+      "name": "c",
+      "email": "c@example.com",
+      "subject": "Chemistry"
+    },
+    {
+      "id": "d052",
+      "name": "f",
+      "email": "f@gmail.com",
+      "subject": "Chemistry"
+    },
+    {
+      "id": "6fbf",
+      "name": "Poly",
+      "email": "polyakter53591@gmail.com",
+      "subject": "CSTE"
+    }
+  ],
+  "student": [
+    {
+      "id": "6e48",
+      "name": "karim",
+      "email": "karim@gmail.com",
+      "subject": 1
+    }
+  ]
+}

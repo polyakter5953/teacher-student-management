@@ -1,0 +1,22 @@
+<h2>Update Teacher</h2>
+
+<form (ngSubmit)="updateTeacher()" *ngIf="teacher">
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="teacher.name" name="name" required />
+  </label>
+
+  <label>
+    Email:
+    <input type="email" [(ngModel)]="teacher.email" name="email" required />
+  </label>
+
+  <label>
+    Subject:
+    <input type="text" [(ngModel)]="teacher.subject" name="subject" required />
+  </label>
+
+  <button type="submit" [disabled]="!teacher.name || !teacher.email || !teacher.subject">Update</button>
+</form>
+
+<p *ngIf="!teacher">Loading teacher data...</p>

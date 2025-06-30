@@ -1,0 +1,22 @@
+<h2>Update Student</h2>
+
+<form (ngSubmit)="updateStudent()" *ngIf="student">
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="student.name" name="name" required />
+  </label>
+
+  <label>
+    Email:
+    <input type="email" [(ngModel)]="student.email" name="email" required />
+  </label>
+
+  <label>
+    Subject:
+    <input type="text" [(ngModel)]="student.id" name="subject" required />
+  </label>
+
+  <button type="submit" [disabled]="!student.name || !student.email || !student.id">Update</button>
+</form>
+
+<p *ngIf="!student">Loading student data...</p>

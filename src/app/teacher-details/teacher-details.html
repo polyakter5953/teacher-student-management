@@ -1,0 +1,11 @@
+<h2>Teacher Details</h2>
+
+<div *ngIf="teacher">
+  <p><strong>Name:</strong> {{ teacher.name }}</p>
+  <p><strong>Email:</strong> {{ teacher.email }}</p>
+  <p><strong>Subject:</strong> {{ teacher.subject }}</p>
+</div>
+
+<div *ngIf="!teacher">
+  Loading teacher data...
+</div>
