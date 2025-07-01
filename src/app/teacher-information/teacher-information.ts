@@ -17,7 +17,7 @@ import { TeacherDetails } from '../teacher-details/teacher-details';
 export class TeacherInformation {
   teachers: Teacher[] = [];
   page = 0;
-  pageSize = 5;
+  pageSize = 30;
 
   constructor(private service: TeacherService, private router: Router) {}
 
