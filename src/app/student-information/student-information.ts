@@ -15,7 +15,7 @@ import { StudentService } from '../services/student';
 export class StudentInformation {
   students: Student[] = [];
   page = 0;
-  pageSize = 5;
+  pageSize = 50;
 
   constructor(private service: StudentService, private router: Router) {}
 
