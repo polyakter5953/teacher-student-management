@@ -18,7 +18,11 @@ export class Users {
   // signup e SignUp type data jabe
   userSignUp(data: SignUp) {
     this.http
-      .post('http://localhost:3000/user', data, { observe: 'response' })
+      .post(
+        'https://student-teacher-management-server-rcv8.onrender.com/user',
+        data,
+        { observe: 'response' }
+      )
       .subscribe((result) => {
         // console.warn(result)
         if (result) {
@@ -50,7 +54,7 @@ export class Users {
         // console.log(result);
         // console.warn(result);
         if (result && result.body && result.body.length) {
-          localStorage.setItem('user', JSON.stringify(result[0]))
+          localStorage.setItem('user', JSON.stringify(result[0]));
           console.warn('user logged in!');
           this.isUserLoggedIn.next(true);
           this.router.navigate(['homepage']);

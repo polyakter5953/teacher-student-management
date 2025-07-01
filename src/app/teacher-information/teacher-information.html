@@ -1,12 +1,19 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th><th>Name</th><th>Email</th><th>Subject</th><th>Action</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Subject</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let t of teachers">
-      <td>{{ t.id }}</td><td>{{ t.name }}</td><td>{{ t.email }}</td><td>{{ t.subject }}</td>
+      <td>{{ t.id }}</td>
+      <td>{{ t.name }}</td>
+      <td>{{ t.email }}</td>
+      <td>{{ t.subject }}</td>
       <td>
         <button [routerLink]="['/update-teacher', t.id]">Update</button>
         <button (click)="deleteTeacher(t.id!)">Delete</button>
@@ -17,5 +24,3 @@
 </table>
 <button (click)="prevPage()">Previous</button>
 <button (click)="nextPage()">Next</button>
-
-

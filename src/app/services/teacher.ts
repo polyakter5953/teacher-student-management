@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Teacher } from '../modules/teacher.module';
 
-@Injectable({ 
-  providedIn: 'root' 
-
+@Injectable({
+  providedIn: 'root',
 })
 export class TeacherService {
-  private apiUrl = 'https://student-teacher-management-server-rcv8.onrender.com/teacher';
+  private apiUrl =
+    'https://student-teacher-management-server-rcv8.onrender.com/teacher';
 
   constructor(private http: HttpClient) {}
 
@@ -32,6 +32,4 @@ export class TeacherService {
   deleteTeacher(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
-
-
 }

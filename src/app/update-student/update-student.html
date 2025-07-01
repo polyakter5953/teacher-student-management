@@ -12,11 +12,16 @@
   </label>
 
   <label>
-    Subject:
+    Teacher ID:
     <input type="text" [(ngModel)]="student.id" name="subject" required />
   </label>
 
-  <button type="submit" [disabled]="!student.name || !student.email || !student.id">Update</button>
+  <button
+    type="submit"
+    [disabled]="!student.name || !student.email || !student.id"
+  >
+    Update
+  </button>
 </form>
 
 <p *ngIf="!student">Loading student data...</p>

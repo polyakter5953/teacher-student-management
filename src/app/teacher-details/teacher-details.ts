@@ -8,17 +8,20 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-teacher-details',
-  imports: [FormsModule, CommonModule,],
+  imports: [FormsModule, CommonModule],
   templateUrl: './teacher-details.html',
-  
+
   styleUrl: './teacher-details.css',
-  
 })
 export class TeacherDetails {
- teacherId!: string;
+  teacherId!: string;
   teacher: any;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.teacherId = String(this.route.snapshot.paramMap.get('id'));
@@ -26,13 +29,13 @@ export class TeacherDetails {
   }
 
   loadTeacher() {
-    this.http.get(`https://student-teacher-management-server-rcv8.onrender.com/teacher/${this.teacherId}`)
-      .subscribe(data => {
+    this.http
+      .get(
+        `https://student-teacher-management-server-rcv8.onrender.com/teacher/${this.teacherId}`
+      )
+      .subscribe((data) => {
         this.teacher = data;
-        console.log(this.teacher)
+        console.log(this.teacher);
       });
   }
-  
-  
 }
-

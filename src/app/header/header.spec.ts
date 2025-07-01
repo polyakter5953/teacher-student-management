@@ -8,9 +8,8 @@ describe('Header', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Header]
-    })
-    .compileComponents();
+      imports: [Header],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Header);
     component = fixture.componentInstance;
@@ -20,5 +19,4 @@ describe('Header', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 });

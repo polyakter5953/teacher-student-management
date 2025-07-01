@@ -4,7 +4,7 @@ import { Homepage } from './homepage/homepage';
 import { Header } from './header/header';
 import { Signup } from './signup/signup';
 import { FormsModule } from '@angular/forms';
-import {  OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { Navbar } from './navbar/navbar';
 import { TeacherSection } from './teacher-section/teacher-section';
 import { StudentInformation } from './student-information/student-information';
@@ -23,45 +23,39 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
-    FormsModule, 
-    Homepage, 
-    Header, 
+    RouterOutlet,
+    FormsModule,
+    Homepage,
+    Header,
     Signup,
     Navbar,
     TeacherSection,
     StudentInformation,
     TeacherInformation,
-    StudentSection, 
+    StudentSection,
     AddTeacher,
     AddStudent,
     UpdateTeacher,
-    UpdateStudent, 
+    UpdateStudent,
     TeacherDetails,
-    StudentDetails, 
+    StudentDetails,
     CommonModule,
-
-    
-    
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  
   isLoggedIn = false;
 
   constructor(private user: Users) {}
 
-   ngOnInit() {
-
+  ngOnInit() {
     this.user.reloadUser();
     // RxJS BehaviorSubject<boolean>
     this.user.isUserLoggedIn.subscribe((status) => {
       console.log(status);
       this.isLoggedIn = status; //  this will update after logout too
-      
     });
-    // this.user.reloadUser(); 
+    // this.user.reloadUser();
   }
 }

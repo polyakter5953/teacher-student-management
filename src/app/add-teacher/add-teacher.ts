@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './add-teacher.css',
 })
 export class AddTeacher {
-  teacher:  Teacher = {
+  teacher: Teacher = {
     name: '',
     email: '',
     subject: '',
@@ -25,11 +25,14 @@ export class AddTeacher {
 
   submitTeacher(): void {
     this.http
-      .post('https://student-teacher-management-server-rcv8.onrender.com/teacher', {
-        name: this.teacher.name,
-        email: this.teacher.email,
-        subject: this.teacher.subject,
-      })
+      .post(
+        'https://student-teacher-management-server-rcv8.onrender.com/teacher',
+        {
+          name: this.teacher.name,
+          email: this.teacher.email,
+          subject: this.teacher.subject,
+        }
+      )
       .subscribe(() => {
         alert('Teacher added successfully!');
         this.router.navigate(['/teacher-information']); // Redirect after submission

@@ -5,10 +5,8 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-section',
-  imports: [RouterLink,FormsModule,CommonModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './teacher-section.html',
-  styleUrl: './teacher-section.css'
+  styleUrl: './teacher-section.css',
 })
-export class TeacherSection {
-  
-}
+export class TeacherSection {}

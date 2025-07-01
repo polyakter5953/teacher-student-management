@@ -17,66 +17,65 @@ import { StudentDetails } from './student-details/student-details';
 import { StudentSection } from './student-section/student-section';
 
 export const routes: Routes = [
-
-    { 
-        path: '', 
-        redirectTo: 'header', 
-        pathMatch: 'full' 
-    },
-    {
-        path:'header',
-        component: Header
-    }, 
-    {
-        path:'homepage',
-        component:Homepage
-    },
-    {
-        path:'student-section',
-        component: StudentSection
-    },
-    {
-        path:'teacher-section',
-        component: TeacherSection
-    },
-    {
-        path:'student-information',
-        component: StudentInformation
-    },
-    {
-        path:'teacher-information',
-        component: TeacherInformation
-    },
-    {
-        path:'update-student/:id',
-        component: UpdateStudent
-    },
-    {
-        path:'update-teacher/:id',
-        component: UpdateTeacher
-    },
-    {
-        path:'signup',
-        component: Signup
-    },
-    {
-        path:'navbar',
-        component:Navbar
-    },
-    {
-        path:'add-teacher',
-        component:AddTeacher
-    },
-    {
-        path:'add-student',
-        component: AddStudent
-    },
-    {
-        path:'teacher-details/:id',
-        component: TeacherDetails
-    },
-    {
-        path:'student-details/:id',
-        component: StudentDetails
-    }
+  {
+    path: '',
+    redirectTo: 'header',
+    pathMatch: 'full',
+  },
+  {
+    path: 'header',
+    component: Header,
+  },
+  {
+    path: 'homepage',
+    component: Homepage,
+  },
+  {
+    path: 'student-section',
+    component: StudentSection,
+  },
+  {
+    path: 'teacher-section',
+    component: TeacherSection,
+  },
+  {
+    path: 'student-information',
+    component: StudentInformation,
+  },
+  {
+    path: 'teacher-information',
+    component: TeacherInformation,
+  },
+  {
+    path: 'update-student/:id',
+    component: UpdateStudent,
+  },
+  {
+    path: 'update-teacher/:id',
+    component: UpdateTeacher,
+  },
+  {
+    path: 'signup',
+    component: Signup,
+  },
+  {
+    path: 'navbar',
+    component: Navbar,
+  },
+  {
+    path: 'add-teacher',
+    component: AddTeacher,
+  },
+  {
+    path: 'add-student',
+    component: AddStudent,
+  },
+  {
+    path: 'teacher-details/:id',
+    component: TeacherDetails,
+  },
+  {
+    path: 'student-details/:id',
+    component: StudentDetails,
+  },
 ];

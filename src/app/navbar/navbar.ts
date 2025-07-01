@@ -8,12 +8,18 @@ import { StudentSection } from '../student-section/student-section';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule, RouterLink, TeacherSection, StudentSection],
+  imports: [
+    RouterModule,
+    CommonModule,
+    RouterLink,
+    TeacherSection,
+    StudentSection,
+  ],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
+  styleUrl: './navbar.css',
 })
 export class Navbar {
-  constructor(private router: Router, private user:Users) {}
+  constructor(private router: Router, private user: Users) {}
 
   logout() {
     localStorage.removeItem('user');

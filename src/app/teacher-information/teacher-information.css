@@ -5,7 +5,8 @@ table {
   font-family: Arial, sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: center;

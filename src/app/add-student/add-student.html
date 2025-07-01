@@ -1,6 +1,24 @@
 <form (ngSubmit)="submitStudent()" #teacherForm="ngForm">
-  <input type="text" name="name" [(ngModel)]="student.name" required placeholder="Enter Name" />
-  <input type="email" name="email" [(ngModel)]="student.email" required placeholder="Enter Email" />
-  <input type="text" name="subject" [(ngModel)]="student.tid" required placeholder="Enter teacher ID" />
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="student.name"
+    required
+    placeholder="Enter Name"
+  />
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="student.email"
+    required
+    placeholder="Enter Email"
+  />
+  <input
+    type="text"
+    name="subject"
+    [(ngModel)]="student.tid"
+    required
+    placeholder="Enter teacher ID"
+  />
   <button type="submit" [disabled]="teacherForm.invalid">Submit</button>
 </form>

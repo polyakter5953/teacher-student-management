@@ -9,13 +9,13 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-add-student',
   imports: [FormsModule],
   templateUrl: './add-student.html',
-  styleUrl: './add-student.css'
+  styleUrl: './add-student.css',
 })
 export class AddStudent {
   student: Student = {
-    name:'',
-    email:'',
-    tid: 1
+    name: '',
+    email: '',
+    tid: 1,
   };
 
   constructor(
@@ -26,16 +26,17 @@ export class AddStudent {
 
   submitStudent(): void {
     this.http
-      .post('https://student-teacher-management-server-rcv8.onrender.com/student', {
-        name: this.student.name,
-        email: this.student.email,
-        subject: this.student.tid,
-      })
+      .post(
+        'https://student-teacher-management-server-rcv8.onrender.com/student',
+        {
+          name: this.student.name,
+          email: this.student.email,
+          tid: this.student.tid,
+        }
+      )
       .subscribe(() => {
         alert('Student added successfully!');
         this.router.navigate(['/student-information']); // Redirect after submission
       });
   }
-
-
 }
