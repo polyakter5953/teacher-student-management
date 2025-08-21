@@ -15,6 +15,7 @@ import { AddStudent } from './add-student/add-student';
 import { TeacherDetails } from './teacher-details/teacher-details';
 import { StudentDetails } from './student-details/student-details';
 import { StudentSection } from './student-section/student-section';
+import { UserResolver } from './user-resolver';
 
 export const routes: Routes = [
   {
@@ -53,6 +54,12 @@ export const routes: Routes = [
   {
     path: 'update-teacher/:id',
     component: UpdateTeacher,
+    // here teacher is the key and UserResolver is the value
+    // UserResolver is the class name
+    // here I need the data from the UserResolver class 
+    resolve: {
+      teacher: UserResolver,
+    }
   },
   {
     path: 'signup',

@@ -31,3 +31,4 @@ export class StudentService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }
+
